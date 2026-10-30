@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "asset_hashes_match": true,
+    "repeated_preparation_safe": true,
+    "portable_trajectory_path": true,
+    "resume_interval_not_stale": true,
+    "preserves_different_motion": true,
+    "public_resume_configuration_valid": true
+  },
+  "scope": "CPU/temporary-file checks, no training or service startup"
+}
