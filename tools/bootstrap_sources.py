@@ -70,9 +70,10 @@ def patch_sources():
             print(f'{repo}: exact patched source already present')
             continue
         patch = ROOT / 'configs/upstream_changes.patch'
-        cmd = ['git', 'apply', '--unsafe-paths', '--include=' + repo + '/*', str(patch)]
-        subprocess.run(cmd[:2] + ['--check'] + cmd[2:], cwd=ROOT / 'third_party', check=True)
-        subprocess.run(cmd, cwd=ROOT / 'third_party', check=True)
+        cmd = ['git', 'apply', '--directory=third_party',
+               '--include=third_party/' + repo + '/*', str(patch)]
+        subprocess.run(cmd[:2] + ['--check'] + cmd[2:], cwd=ROOT, check=True)
+        subprocess.run(cmd, cwd=ROOT, check=True)
         for row in rows:
             if digest(ROOT / 'third_party' / row['path']) != row['sha256']:
                 raise ValueError(f'Patched source differs from tested file: {row["path"]}')

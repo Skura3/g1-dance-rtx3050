@@ -5,7 +5,12 @@
     "portable_trajectory_path": true,
     "resume_interval_not_stale": true,
     "preserves_different_motion": true,
-    "public_resume_configuration_valid": true
+    "public_resume_configuration_valid": true,
+    "bootstrap_exact_patch_plain_folder": true,
+    "bootstrap_exact_patch_git_checkout": true,
+    "bootstrap_repeat_safe": true,
+    "remote_release_digests_match": true
   },
-  "scope": "CPU/temporary-file checks, no training or service startup"
+  "scope": "CPU/temporary-file checks, no training or service startup",
+  "cpu_regression_tests_passed": 20
 }
