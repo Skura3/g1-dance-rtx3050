@@ -1,0 +1,11 @@
+{
+  "video": "data/video/reference_full.mp4",
+  "fps": 30,
+  "review_image": "outputs/full_validation/support_review.jpg",
+  "note": "Visually reviewed foot-support instants. Sparse anchors correct slow vertical drift; uncertain airborne frames are not forced to ground. Foot side uses the lowest robot sole; this remains a monocular approximation.",
+  "support_frames": [30, 150, 165, 210, 225, 240, 255, 300, 315, 330, 345, 369],
+  "shoulder_transition_windows_s": [
+    {"joint": "right_shoulder_yaw_joint", "start": 8.58, "end": 8.96},
+    {"joint": "left_shoulder_yaw_joint", "start": 9.58, "end": 9.96}
+  ]
+}

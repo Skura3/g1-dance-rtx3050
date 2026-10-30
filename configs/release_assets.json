@@ -1,0 +1,21 @@
+{
+  "tag": "v1.0.0",
+  "assets": [
+    {
+      "filename": "checkpoint_429526.pt",
+      "bytes": 215612140,
+      "sha256": "d28e9898258a0cf90b1af9d0c97c933814e0ec87413d5b47d6fc38d8ee62bbc9"
+    },
+    {
+      "filename": "checkpoint_final_452376.pt",
+      "bytes": 215612140,
+      "sha256": "0b2a2b5f00ce652dee0f686fc242cd1c5012bb0a7d8c884df5be387547c3a3a1"
+    },
+    {
+      "filename": "g1_scene.mjb",
+      "bytes": 71159933,
+      "sha256": "923d29945736983f411d122eb8d5439373b730ce737c9e75951ae4fd0c46598e"
+    }
+  ],
+  "scope": "Research reproduction artifacts; upstream model/dataset/robot licenses still apply."
+}

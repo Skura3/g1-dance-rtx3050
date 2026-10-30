@@ -1,0 +1,26 @@
+{
+  "status": "Strict provisional visual-fidelity targets requested by user; feasibility and theoretical minimum are NOT proven",
+  "reference": "data/preview/reference_full_contact.npz",
+  "must_complete_without_midclip_reset": true,
+  "mean_tilt_error_deg_max": 5.0,
+  "peak_tilt_error_deg_max": 15.0,
+  "mean_absolute_yaw_error_deg_max": 5.0,
+  "peak_absolute_yaw_error_deg_max": 20.0,
+  "joint_rmse_rad_max": 0.2,
+  "mean_root_position_error_m_max": 0.1,
+  "peak_root_position_error_m_max": 0.25,
+  "selection_rule": "Reject failed rollouts; prefer lower yaw and joint errors with stable posture. Passing numeric targets still needs video review; do not align away yaw errors or retime targets to improve scores.",
+  "scope": "Final numerical training-stop gate only; failed quality checks continue learning. Passing still requires visual review. These are stricter engineering targets, not a certified attainable lower bound.",
+  "training_stop_policy": "Early falls, tracking errors and fluctuating rewards continue learning. Continuous mode stops on two independent nominal checkpoints passing these targets plus all three reset-perturbed confirmation seeds, or genuine numerical/resource faults or user stop. Visual review remains required; this is not proof of mathematical convergence.",
+  "revision": "20261029_224318",
+  "arms_joint_rmse_rad_max": 0.25,
+  "worst_2s_joint_rmse_rad_max": 0.3,
+  "basis": "Root 0.10/0.25 m is near an already observed 0.082/0.230 m checkpoint. Heading 5/20 deg, tilt 5/15 deg and joint 0.20 rad are stricter improvement goals; joint/segment attainability is unproven. No claim of a paper-derived theoretical minimum or imperceptible visual differences.",
+  "metric_definitions": {
+    "tilt": "Angle between actual and reference gravity directions in their respective root frames; not absolute tilt from vertical.",
+    "joint_rmse": "Pooled actual minus refreshed-reference joint angles in radians; unchanged time sampling, no retiming.",
+    "arms_joint_rmse": "Pooled shoulder, elbow and wrist joint RMSE over the entire recorded clip.",
+    "worst_2s_joint_rmse": "Maximum pooled all-joint RMSE across every full 2-second sample window (100 samples at 50 Hz), with one-sample stride.",
+    "root": "Absolute 3D root-position distance to retargeted robot reference, no translation alignment."
+  }
+}

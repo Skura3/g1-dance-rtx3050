@@ -1,0 +1,14 @@
+{
+  "source_video": "data/video/reference_full.mp4",
+  "source_fps": 30,
+  "review": "outputs/contact_validation/hand_contact_review.jpg",
+  "description": "Manual visible contacts around the floor sweep; timing approximate to one source frame. Automatic foot contacts require GVHMR toe-static probability >0.85 and confident 2D ankle, >=4 consecutive source frames.",
+  "manual_contacts": [
+    {"body": "left_hand", "start": 7.80, "end": 8.00, "source": "video wrist/hand visible on grass; release starts near 8.067s"},
+    {"body": "right_hand", "start": 7.80, "end": 7.90, "source": "short visible palm support during sweep; later release uncertain"},
+    {"body": "left_foot", "start": 7.70, "end": 8.03, "source": "visible planted foot while opposite leg sweeps"}
+  ],
+  "automatic_static_probability": 0.85,
+  "automatic_ankle_confidence": 0.6,
+  "automatic_minimum_source_frames": 4
+}

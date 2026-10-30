@@ -1,0 +1,4 @@
+{
+  "wm_trainer": {"batch_size": 1024},
+  "policy_trainer": {"batch_size": 1024}
+}

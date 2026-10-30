@@ -1,0 +1,11 @@
+{
+  "evaluation_interval_steps": 4000,
+  "recovery_checkpoint_interval_steps": 1000,
+  "consecutive_nominal_passes": 2,
+  "robustness_seeds": [11, 23, 37],
+  "criteria_file": "configs/dance_acceptance.json",
+  "evaluation_timeout_seconds": 600,
+  "retained_evaluation_checkpoints": 2,
+  "minimum_free_disk_gib": 1.5,
+  "notes": "Continue anchor iteration 291800 without resetting optimizers or sampler. Replay is rebuilt once on process start and remains live across evaluations. Early falls, errors, and nonmonotonic rewards never stop learning. Thresholds are approximate engineering targets, not proof of mathematical convergence; accepted checkpoint needs visual review. No short step/time cap."
+}

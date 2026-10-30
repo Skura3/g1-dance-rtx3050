@@ -1,0 +1,52 @@
+{
+  "checkpoint": "logs/train/reference_contact_anchor_strict/eval_000429526.pt",
+  "checkpoint_sha256": "d28e9898258a0cf90b1af9d0c97c933814e0ec87413d5b47d6fc38d8ee62bbc9",
+  "checkpoint_iteration": 429526,
+  "seed": 0,
+  "reset_noise": false,
+  "control_dt_s": 0.02,
+  "scope": "Learned-policy free-base physics; every recorded clip runs until its first terminal state, with no mid-clip resets",
+  "external_forces": false,
+  "gravity": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "resets_during_each_recorded_clip": 0,
+  "metric_timing": "Post-step actual state versus refreshed reference; may differ slightly from upstream reward/tilt measurement timing",
+  "clips": [
+    {
+      "steps": 616,
+      "failed": false,
+      "timeout": true,
+      "norm_return": 0.8364032744127627,
+      "name": "reference_full_contact",
+      "states": "logs/train/reference_contact_anchor_strict/evaluations/000429526/nominal/reference_full_contact_states.npz",
+      "simulated_seconds": 12.32,
+      "root_error_mean_m": 0.06511281106324422,
+      "root_error_max_m": 0.15447694063186646,
+      "height_error_max_m": 0.11731129884719849,
+      "tilt_mean_deg": 5.3490002383530815,
+      "tilt_max_deg": 17.055376052856445,
+      "tilt_peak_time_s": 9.06,
+      "tilt_above_20deg_frames": 0,
+      "joint_rmse_rad": 0.1640220433473587,
+      "aligned_body_error_mean_m": 0.048274166688830195,
+      "absolute_body_error_mean_m": 0.07430669856808682,
+      "orientation_error_max_deg": 27.32028995899175,
+      "yaw_error_mean_abs_deg": 5.102698182722376,
+      "yaw_error_max_abs_deg": 39.04374732194131,
+      "yaw_error_last_deg": 5.466047830522668,
+      "yaw_error_peak_time_s": 8.040000000000001,
+      "arms_joint_rmse_rad": 0.18031056385261676,
+      "worst_2s_joint_rmse_rad": 0.2312797955431161,
+      "worst_2s_window_start_s": 7.48,
+      "joint_quality_window_samples": 100
+    }
+  ],
+  "reference_timing_note": "Upstream reset initializes the robot at frame 0 and advances command to frame 1 before first observation. Recorded metrics use that refreshed command; no retiming applied.",
+  "acceptance_note": "No termination is not a fidelity pass: upstream projected-gravity/height checks do not constrain absolute yaw or horizontal drift.",
+  "physics_wall_seconds": 22.11573471999145,
+  "gpu_total_memory_peak_mib": 2958.0,
+  "gpu_temperature_max_c": 77.0
+}

@@ -1,0 +1,329 @@
+{
+  "run_name": "reference_contact_anchor_strict",
+  "log_root": "logs/train",
+  "seed": 0,
+  "device": "cuda:0",
+  "data": {
+    "npz_dir": "data/preview",
+    "clips": [
+      "reference_full_contact"
+    ],
+    "limit": null,
+    "manifest": null,
+    "library": null
+  },
+  "env": {
+    "num_envs": 64,
+    "episode_length_s": 15.0,
+    "action_noise_std": 0.05,
+    "obs_noise": true,
+    "reset_noise": true,
+    "domain_randomization": false,
+    "sampling_mode": "return",
+    "replay_capacity": 512,
+    "future_frames": 10,
+    "compact_library": false,
+    "anchor_obs": true,
+    "lock_waist": false,
+    "lock_waist_refs": "feasible",
+    "locked_action_weight": -0.1,
+    "waist_coupling": false,
+    "waist_coupling_k": 1.4,
+    "waist_coupling_c": 0.95,
+    "waist_roll_range": null,
+    "waist_roll_model_soft_limits": false,
+    "dr_waist_roll_damping": null,
+    "dr_waist_roll_friction": null,
+    "tilt_hinge_weight": -24.0,
+    "tilt_hinge_knee": 0.17,
+    "joint_torque_weight": 0.0,
+    "joint_torque_jw": [
+      [
+        "waist_roll_joint",
+        2.0
+      ],
+      [
+        "waist_pitch_joint",
+        2.0
+      ],
+      [
+        "waist_yaw_joint",
+        1.0
+      ],
+      [
+        "left_knee_joint",
+        1.0
+      ],
+      [
+        "right_knee_joint",
+        1.0
+      ],
+      [
+        "left_hip_roll_joint",
+        0.5
+      ],
+      [
+        "right_hip_roll_joint",
+        0.5
+      ]
+    ],
+    "joint_torque_jw_default": 0.1,
+    "joint_vel_hinge_weight": 0.0,
+    "joint_vel_hinge_joints": [
+      "left_knee_joint",
+      "right_knee_joint"
+    ],
+    "joint_vel_hinge_thr": 12.0,
+    "yaw_rate_hinge_weight": 0.0,
+    "yaw_rate_hinge_thr": 7.5,
+    "imu_sat_prob": 0.0,
+    "imu_gyro_limit": 8.727,
+    "imu_accel_k_max": 0.5,
+    "imu_init_tilt_deg": 8.0,
+    "dr_kp_range": null,
+    "dr_torso_mass_add": null,
+    "dr_action_delay_substeps": 0,
+    "dr_knee_effort_scale": null,
+    "dr_push_prob": 0.0,
+    "dr_push_frames": [
+      690,
+      730
+    ],
+    "dr_push_steps": [
+      2,
+      10
+    ],
+    "dr_push_force": [
+      60.0,
+      60.0,
+      30.0
+    ],
+    "dr_push_torque": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "dr_push_clips": [],
+    "sampler_gmax_mode": "horizon",
+    "sampler_softmax_temp": 25.0,
+    "sampler_ema_alpha": 0.05,
+    "sampler_count_warmstart": true,
+    "sampler_hard_clip_cap": 0.0,
+    "fail_reset_frac": 0.25,
+    "fail_reset_list": "configs/reference_contact_focus.csv",
+    "fail_reset_window_s": 2.0,
+    "real_reset_file": null,
+    "real_reset_prob": 0.0,
+    "real_reset_vel": "mix",
+    "real_reset_dz": [
+      -0.01,
+      0.01
+    ],
+    "real_reset_dvz": 0.2,
+    "real_reset_tilt_deg": 3.0,
+    "real_reset_joint_pos_noise": 0.02,
+    "real_reset_joint_vel_noise": 0.3
+  },
+  "world_model": {
+    "hidden": [
+      2048,
+      2048,
+      2048
+    ],
+    "term_hidden": [
+      64,
+      64
+    ],
+    "state_spec": {
+      "dt": 0.02,
+      "err_scale": [
+        0.05,
+        0.1,
+        0.5,
+        1.0,
+        0.1,
+        2.0
+      ],
+      "out_scale": [
+        0.3,
+        0.5,
+        2.0,
+        0.01,
+        0.02,
+        0.02
+      ],
+      "in_scale": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        1.0,
+        5.0
+      ],
+      "explicit_integration": true,
+      "xi_offset": [
+        0.75,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xi_scale": [
+        0.45,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "locked_joints": []
+    },
+    "term_loss_weight": 1.0,
+    "height_threshold": 0.25,
+    "tilt_threshold": 0.8
+  },
+  "wm_trainer": {
+    "window": 8,
+    "batches_per_update": 2,
+    "batch_size": 1024,
+    "lr": 0.0002,
+    "grad_clip": 1.0,
+    "weight_decay": 0.0,
+    "compile": null
+  },
+  "policy": {
+    "encoder_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "decoder_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "latent_dim": 32,
+    "history": 10,
+    "obs_term_scale": [
+      1.0,
+      5.0,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "goal_term_scale": [
+      1.0,
+      5.0,
+      1.0,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "decoder_last_gain": 0.01,
+    "goal_dim": 689
+  },
+  "critic": {
+    "hidden": [
+      256,
+      128
+    ]
+  },
+  "policy_trainer": {
+    "horizon": 16,
+    "batch_size": 1024,
+    "history": 10,
+    "future_frames": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "lr": 0.0002,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip_norm": 1.0,
+    "grad_clip_value": 0.1,
+    "critic_lr": 0.0002,
+    "critic_grad_clip": 1.0,
+    "critic_epochs": 5,
+    "critic_minibatches": 4,
+    "use_critic": true,
+    "obs_noise": true,
+    "compile": null,
+    "anchor_obs": true,
+    "imu_sat_prob": 0.0,
+    "imu_gyro_limit": 8.727,
+    "imu_accel_k_max": 0.5,
+    "imu_init_tilt_deg": 8.0
+  },
+  "schedule": {
+    "total_iterations": 4611686018427387904,
+    "updates_per_env_step": 0.4,
+    "policy_updates_per_wm_update": 1,
+    "warmup_iterations": 64,
+    "lr_final_ratio": 0.03,
+    "lr_decay_fraction": 0.78125,
+    "log_interval": 100,
+    "checkpoint_interval": 1000,
+    "max_hours": null,
+    "lr_constant": 2e-05
+  },
+  "resume": "outputs/training_acceptance_revision/20261029_224318/resume_checkpoint.pt",
+  "resume_reset_sampler": false
+}

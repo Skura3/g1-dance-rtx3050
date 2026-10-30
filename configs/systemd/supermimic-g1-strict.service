@@ -1,0 +1,21 @@
+[Unit]
+Description=SuperMimic G1 batch 1024 continuation with strict fidelity acceptance
+
+[Service]
+Type=simple
+WorkingDirectory=/home/djs/supermimic
+Environment=PYTHONUNBUFFERED=1
+Environment=MUJOCO_GL=egl
+Environment=G1_SUPERMIMIC_SOURCE=nju
+Environment=OMP_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+ExecStart=/usr/bin/systemd-inhibit --what=sleep --mode=block --who=SuperMimic --why=Continuous-G1-training /home/djs/supermimic/envs/training/.venv/bin/python -B /home/djs/supermimic/tools/finetune_nju.py --config /home/djs/supermimic/configs/g1_3050_batch1024_continuation.json --checkpoint /home/djs/supermimic/outputs/training_acceptance_revision/20261029_224318/resume_checkpoint.pt --run-name reference_contact_anchor_strict --keep-sampler --until-targets --supervision /home/djs/supermimic/configs/g1_3050_strict_supervision.json
+ExecStopPost=-/home/djs/supermimic/envs/training/.venv/bin/python -B /home/djs/supermimic/tools/finalize_long_training.py --run-dir /home/djs/supermimic/logs/train/reference_contact_anchor_strict
+ExecStopPost=/usr/bin/python3 -B /home/djs/supermimic/tools/restore_training_wallpaper.py --record /home/djs/supermimic/outputs/training_resource_trial/wallpaper_pause.json
+Restart=no
+KillMode=control-group
+KillSignal=SIGTERM
+TimeoutStopSec=900
+StandardOutput=append:/home/djs/supermimic/logs/train/reference_contact_anchor_strict/console.log
+StandardError=inherit

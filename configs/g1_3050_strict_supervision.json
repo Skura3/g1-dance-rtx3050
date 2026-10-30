@@ -1,0 +1,21 @@
+{
+  "evaluation_interval_steps": 4000,
+  "first_evaluation_iteration": 337526,
+  "recovery_checkpoint_interval_steps": 1000,
+  "consecutive_nominal_passes": 2,
+  "robustness_seeds": [
+    11,
+    23,
+    37
+  ],
+  "criteria_file": "configs/dance_acceptance.json",
+  "evaluation_timeout_seconds": 600,
+  "retained_evaluation_checkpoints": 3,
+  "review_after_evaluations": 1,
+  "minimum_free_disk_gib": 1.5,
+  "notes": "User requested tighter final acceptance. Keep batch1024, learning rates, rewards, horizon and 4000-step evaluation cadence. Next 337526 remains third observation point across the continuation lineage; this new run counts one remaining observation. Reset nominal success streak because criteria changed. No automatic hyperparameter changes.",
+  "previous_observation_evaluations": [
+    329526,
+    333526
+  ]
+}

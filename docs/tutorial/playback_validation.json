@@ -1,0 +1,11 @@
+{
+  "frames": 617,
+  "steps": 616,
+  "fps": 50.0,
+  "duration": 12.32,
+  "same_shape": true,
+  "finite": true,
+  "joint_order_match": true,
+  "nq": 36,
+  "wall_clock_pause_resume_reset": true
+}

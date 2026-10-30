@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "creates_five_files": true,
+    "keeps_verified_original_focus": true,
+    "rejects_existing_name": true,
+    "new_clip_disables_old_focus": true,
+    "nju_config_fields_valid": true,
+    "random_config_fields_valid": true
+  },
+  "scope": "Temporary config fixtures only; no motion loading, CUDA simulation, optimizer, checkpoint or service mutation."
+}

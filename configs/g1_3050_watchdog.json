@@ -1,0 +1,19 @@
+{
+  "training_service": "supermimic-g1-strict.service",
+  "invocation_id": "REPLACE_WITH_NEW_INVOCATION_ID",
+  "run_dir": "/home/djs/supermimic/logs/train/reference_contact_anchor_strict",
+  "output_dir": "/home/djs/supermimic/outputs/training_watchdog/strict",
+  "gpu_uuid": "REPLACE_WITH_NVIDIA_SMI_GPU_UUID",
+  "temperature_limit_c": 100,
+  "stall_limit_seconds": 14400,
+  "poll_seconds": 10,
+  "overheat_grace_seconds": 15,
+  "stall_grace_seconds": 60,
+  "termination_grace_seconds": 15,
+  "wallpaper_record": "/home/djs/supermimic/outputs/training_resource_trial/wallpaper_pause.json",
+  "best_sources": {
+    "current_run_best": "/home/djs/supermimic/logs/train/reference_contact_anchor_strict",
+    "inherited_recent_best": "/home/djs/supermimic/logs/train/reference_contact_anchor_batch1024",
+    "historical_best": "/home/djs/supermimic/logs/train/reference_contact_anchor_long"
+  }
+}

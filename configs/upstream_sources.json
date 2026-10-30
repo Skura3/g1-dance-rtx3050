@@ -1,0 +1,45 @@
+[
+  {
+    "name": "GVHMR",
+    "repository": "https://github.com/zju3dv/GVHMR",
+    "commit": "ee960bb6e2ea2d381aa97f08e9b71ef320b624b1",
+    "source_archive": "https://codeload.github.com/zju3dv/GVHMR/tar.gz/ee960bb6e2ea2d381aa97f08e9b71ef320b624b1"
+  },
+  {
+    "name": "GMR",
+    "repository": "https://github.com/YanjieZe/GMR",
+    "commit": "25f56db79ac411258b377b6d4ccba0c8ff3372ac",
+    "source_archive": "https://codeload.github.com/YanjieZe/GMR/tar.gz/25f56db79ac411258b377b6d4ccba0c8ff3372ac"
+  },
+  {
+    "name": "SuperMimic-Reproduced",
+    "repository": "https://github.com/CuboiLeo/SuperMimic-Reproduced",
+    "commit": "ba6105349069bf040f1fdad60873d13138d505a2",
+    "source_archive": "https://codeload.github.com/CuboiLeo/SuperMimic-Reproduced/tar.gz/ba6105349069bf040f1fdad60873d13138d505a2"
+  },
+  {
+    "name": "mjlab",
+    "repository": "https://github.com/mujocolab/mjlab",
+    "commit": "8bb2bc9e187797689ec82c78c35019afd2fd0376",
+    "source_archive": "https://codeload.github.com/mujocolab/mjlab/tar.gz/8bb2bc9e187797689ec82c78c35019afd2fd0376"
+  },
+  {
+    "name": "pytorch3d",
+    "repository": "https://github.com/facebookresearch/pytorch3d",
+    "source_archive": "https://codeload.github.com/facebookresearch/pytorch3d/tar.gz/refs/heads/main",
+    "archive_sha256": "57d50439e86cd423aaee8f2aef5ab5008d9ddce35c0744d56551359f18aca4cd",
+    "version": "0.7.9",
+    "build": "PYTORCH3D_NO_EXTENSION=1; pure Torch transforms only",
+    "bundled_source_archive": "vendor/pytorch3d-0.7.9-source.tar.gz",
+    "bundled_source_sha256": "9c1ce275320975d4360ddbb8dae7f49fdc9d6867f32f8dc59ced9a912c002a46",
+    "bundled_source_note": "Exact installed source subset: package and packaging files; excludes build artifacts, tests and unrelated documentation. BSD notices retained."
+  },
+  {
+    "name": "SuperMimic-Repro-Sim2Real",
+    "repository": "https://github.com/NJU-R-L-Group-Embodied-Lab/SuperMimic-Repro-Sim2Real",
+    "commit": "f8f60d7bbdba68468c050ef100af02d752ca238e",
+    "local_path": "third_party/SuperMimic-Repro-Sim2Real",
+    "user_source_archive": "data/downloads/SuperMimic-Repro-Sim2Real-main.zip",
+    "archive_sha256": "2d934bac72c78c17acc7f8a8cd4197419b22f43d8d751d4689844dc20a71b083"
+  }
+]

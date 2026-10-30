@@ -1,0 +1,7 @@
+# Quality-error windows from saved physics, not actual termination failures.
+# 4.2s kick, 7.8s hand support, 9.32s tilt peak, 11.86s heading drift.
+name,fail_step
+reference_full_contact,210
+reference_full_contact,390
+reference_full_contact,466
+reference_full_contact,593

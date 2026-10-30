@@ -1,0 +1,34 @@
+[
+  {
+    "path": "GVHMR/hmr4d/utils/geo_transform.py",
+    "sha256": "3f931b4b939c61c2eda5a41991289b3d21e424c7840c9c163a7b6fb1a503e989"
+  },
+  {
+    "path": "GVHMR/hmr4d/utils/preproc/tracker.py",
+    "sha256": "32e3d39f0fbff42cad879e4973549ea6835cd26e2b6c7ad8637264025214a901"
+  },
+  {
+    "path": "GVHMR/hmr4d/utils/preproc/vitfeat_extractor.py",
+    "sha256": "bf638b51736f248cc0972d0fbc338a1d4d81aaf42ac628fada4bf43bb8ad6f69"
+  },
+  {
+    "path": "GVHMR/hmr4d/utils/preproc/vitpose.py",
+    "sha256": "e98a5725bd616b24f3426ab59682d0762a65b07bd03a0f4f2526c3b37d5aa07d"
+  },
+  {
+    "path": "GVHMR/hmr4d/utils/preproc/vitpose_pytorch/src/vitpose_infer/builder/model_builder.py",
+    "sha256": "38ec6612af5d9534faad3bad0b5ccb77c55abe1374fd98c608c6a9f2c7f0c4dd"
+  },
+  {
+    "path": "GVHMR/hmr4d/utils/preproc/vitpose_pytorch/src/vitpose_infer/model_builder.py",
+    "sha256": "ed097018c7cce6ff6b834059452d14a032b1198bf2b823d63b8af494c0577623"
+  },
+  {
+    "path": "SuperMimic-Reproduced/pyproject.toml",
+    "sha256": "ea848ed50f1dc05c600556d056edfef7ef9659895feeedfe7994e91f9694df9e"
+  },
+  {
+    "path": "SuperMimic-Reproduced/src/supermimic/training/loop.py",
+    "sha256": "554615fb62450767b65db9f8a527fe97e92c4b21f212ee2d7d1d676d85387aaf"
+  }
+]

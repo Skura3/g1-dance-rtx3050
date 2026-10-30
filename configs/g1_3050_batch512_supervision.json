@@ -1,0 +1,12 @@
+{
+  "evaluation_interval_steps": 4000,
+  "recovery_checkpoint_interval_steps": 1000,
+  "consecutive_nominal_passes": 2,
+  "robustness_seeds": [11, 23, 37],
+  "criteria_file": "configs/dance_acceptance.json",
+  "evaluation_timeout_seconds": 600,
+  "retained_evaluation_checkpoints": 3,
+  "review_after_evaluations": 3,
+  "minimum_free_disk_gib": 1.5,
+  "notes": "User-authorized fixed batch 512 continuation from iteration 325526. Wallpaper paused; learning rates, architecture, horizon, environment count, rewards and reference unchanged. Review at 329526, 333526, 337526. Do not auto-adjust settings after review. Existing success stop and runtime fault handling remain active."
+}

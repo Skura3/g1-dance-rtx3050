@@ -1,0 +1,27 @@
+[project]
+name = "g1-dance-training"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["supermimic", "mjlab[cu126]", "torch>=2.14.0", "warp-lang==1.18.0+cu12"]
+
+[tool.uv.sources]
+supermimic = { path = "../../third_party/SuperMimic-Reproduced", editable = true }
+mjlab = { path = "../../third_party/mjlab", editable = true }
+torch = { path = "../../data/downloads/wheels/torch-2.14.1+cu126-cp312-cp312-manylinux_2_28_x86_64.whl" }
+warp-lang = { path = "../../data/downloads/wheels/warp_lang-1.18.0+cu12-py3-none-manylinux_2_28_x86_64.whl" }
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com/"
+explicit = true
+

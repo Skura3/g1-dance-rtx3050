@@ -1,0 +1,45 @@
+{
+  "checkpoint_readable": true,
+  "required_fields_present": [
+    "wm",
+    "policy",
+    "critic",
+    "wm_opt",
+    "policy_opt",
+    "critic_opt",
+    "bin_return",
+    "bin_memory",
+    "bin_visits",
+    "iteration",
+    "num_updates",
+    "config"
+  ],
+  "iteration": 452376,
+  "num_updates": 180647,
+  "tensor_checks": {
+    "tensors": 167,
+    "floating_tensors": 166,
+    "nonfinite": []
+  },
+  "optimizer_state_counts": {
+    "wm_opt": 14,
+    "policy_opt": 20,
+    "critic_opt": 6
+  },
+  "sampler_shapes": {
+    "bin_return": [
+      13
+    ],
+    "bin_memory": [
+      13
+    ],
+    "bin_visits": [
+      13
+    ]
+  },
+  "sha256": "0b2a2b5f00ce652dee0f686fc242cd1c5012bb0a7d8c884df5be387547c3a3a1",
+  "independent_archive_copy": true,
+  "replay_buffer_saved": false,
+  "rng_and_live_simulation_state_saved": false,
+  "resume_note": "Models, optimizer moments, sampler and counters can resume. Replay buffer is rebuilt with existing 64-step warmup; not a bitwise continuation of a running process."
+}

@@ -1,0 +1,13 @@
+{
+  "evaluation_interval_steps": 4000,
+  "first_evaluation_iteration": 329526,
+  "recovery_checkpoint_interval_steps": 1000,
+  "consecutive_nominal_passes": 2,
+  "robustness_seeds": [11, 23, 37],
+  "criteria_file": "configs/dance_acceptance.json",
+  "evaluation_timeout_seconds": 600,
+  "retained_evaluation_checkpoints": 3,
+  "review_after_evaluations": 3,
+  "minimum_free_disk_gib": 1.5,
+  "notes": "User requested freeing wallpaper VRAM and using it for training. Continue exact iteration 328259 at batch 1024 after finite/memory/throughput probes. Keep LR, horizon, rewards, data, environments, and stop thresholds unchanged. Preserve planned evaluations 329526,333526,337526; the first is a mixed batch512/batch1024 interval, not 4000 steps entirely at batch1024. No automatic further tuning."
+}

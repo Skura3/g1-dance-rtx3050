@@ -1,0 +1,14 @@
+[Unit]
+Description=Independent SuperMimic overnight temperature and progress watchdog
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home/djs/supermimic
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -B /home/djs/supermimic/tools/training_watchdog.py --config /home/djs/supermimic/configs/g1_3050_watchdog.json
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=15
+StandardOutput=journal
+StandardError=journal

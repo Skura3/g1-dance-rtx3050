@@ -1,0 +1,54 @@
+{
+  "updated": "2026-10-29",
+  "scope": "Selection record only; use explicit input paths. Historical training_approved fields and instantaneous screens do not prove learned-policy feasibility.",
+  "preferred_policy_evaluation": "data/preview/reference_full_contact.npz",
+  "candidates": [
+    {
+      "file": "data/preview/reference_full_contact.npz",
+      "status": "continuous_policy_training",
+      "learned_tracking_verified": false,
+      "released_policy_evaluation": {
+        "checkpoint": "e13i_0291000",
+        "steps": 616,
+        "termination_failed": false,
+        "quality_accepted": false,
+        "report": "outputs/nju_validation/policy_evaluation.json",
+        "recorded_rollout_completed": true,
+        "reason": "Full rollout survives upstream termination but has large yaw, position and joint errors.",
+        "detailed_report": "outputs/nju_validation/rollouts/report.json"
+      },
+      "continuous_training": {
+        "run": "reference_contact_anchor_long",
+        "initial_iteration": 291800,
+        "status_file": "logs/train/reference_contact_anchor_long/status.json",
+        "learned_tracking_verified": false
+      }
+    },
+    {
+      "file": "data/preview/reference_full_support.npz",
+      "status": "research_only_not_preferred",
+      "reason": "Maximum optimization evaluations reached; no overall WBC improvement."
+    },
+    {
+      "file": "data/preview/reference_full_dynamic.npz",
+      "status": "failed_experiment_exclude_from_training",
+      "reason": "Native-contact inverse dynamics has excessive base residual and required actuator torque."
+    },
+    {
+      "file": "data/preview/reference_full_nju_drift.npz",
+      "status": "comparison_only_not_preferred",
+      "reason": "27 frames with self penetration above 5mm; no overall tracking improvement.",
+      "released_policy_evaluation": {
+        "checkpoint": "e13i_0291000",
+        "steps": 616,
+        "termination_failed": false,
+        "quality_accepted": false,
+        "report": "outputs/nju_validation/policy_evaluation.json",
+        "recorded_rollout_completed": true,
+        "reason": "Full rollout survives upstream termination but has large yaw, position and joint errors.",
+        "detailed_report": "outputs/nju_validation/rollouts/report.json"
+      },
+      "learned_tracking_verified": false
+    }
+  ]
+}
